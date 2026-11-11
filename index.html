@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="theme-color" content="#d4eed5">
+<title>클로버 클릭커</title>
+<style>
+  @font-face {
+    font-family: 'LeeSeoyun';
+    src: url('data:font/woff2;base64,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') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+  }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #d4eed5;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* 390 x 844 피그마 프레임 비율을 유지하며 화면에 맞춤 */
+  .stage {
+    position: relative;
+    width: min(100vw, calc(100dvh * 390 / 844));
+    aspect-ratio: 390 / 844;
+    container-type: inline-size;
+  }
+  .stage > svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .caption {
+    position: absolute;
+    left: 50%;
+    top: calc(605.79 / 844 * 100%);
+    transform: translateX(-50%);
+    margin: 0;
+    font-family: 'LeeSeoyun', 'Apple SD Gothic Neo', sans-serif;
+    font-size: calc(24 / 390 * 100cqw);
+    line-height: normal;
+    color: #05431c;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  /* 잎사귀 버튼: 진한 초록 테두리는 고정, 연두색만 눌림 */
+  .leaf {
+    cursor: pointer;
+    outline: none;
+    touch-action: none;
+  }
+  .leaf .inner {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 240ms cubic-bezier(.34, 1.56, .64, 1), filter 240ms ease-out;
+  }
+  .leaf.pressed .inner {
+    transform: translateY(1.5px) scale(0.9);
+    filter: brightness(0.88);
+    transition: transform 60ms ease-out, filter 60ms ease-out;
+  }
+  .leaf:focus-visible .outline path {
+    stroke: #ffffff;
+    stroke-width: 3;
+  }
+  .bubble { pointer-events: none; }
+  .stem { pointer-events: none; }
+
+  /* iOS 햅틱용 숨겨진 스위치 */
+  .haptic-hidden {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+  }
+</style>
+</head>
+<body>
+  <main class="stage">
+    <svg viewBox="0 0 390 844" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="네 잎 클로버 클릭커">
+      <!-- 왼쪽 잎 -->
+      <g class="leaf" data-leaf="left" role="button" tabindex="0" aria-label="왼쪽 잎">
+        <svg class="outline" x="105.49" y="303.28" width="94" height="102" viewBox="0 0 94 102">
+          <path d="M9.1734 92.8053C20.8862 104.518 39.7419 104.652 51.2891 93.105L93.105 51.289L50.689 8.87299C38.9762 -2.8396 20.1205 -2.97382 8.57332 8.5733C-2.97383 20.1204 -2.83959 38.9762 8.87301 50.689C-2.6742 62.2362 -2.5394 81.0925 9.1734 92.8053Z" fill="#05431C"/>
+        </svg>
+        <g class="inner"><svg x="86.96" y="300.74" width="105" height="105" viewBox="0 0 105 105" pointer-events="none">
+          <path d="M35.0646 86.9176C44.7474 96.6003 60.3347 96.7112 69.8807 87.1655L104.449 52.5966L69.3848 17.532C59.702 7.84953 44.1147 7.73835 34.5688 17.2841C25.023 26.8299 25.1335 42.418 34.816 52.1008C25.2703 61.6468 25.3819 77.2348 35.0646 86.9176Z" fill="#6FC64A"/>
+          <path d="M40.0936 82.3376C48.3492 90.593 61.7339 90.5932 69.9895 82.3376L99.8862 52.441L69.9895 22.5443L69.5994 22.1638C61.3174 14.2908 48.2196 14.4182 40.0929 22.545C31.8376 30.8006 31.8375 44.1854 40.0929 52.441C31.8373 60.6966 31.8379 74.082 40.0936 82.3376Z" fill="#7DDA56"/>
+        </svg></g>
+      </g>
+
+      <!-- 아래 잎 -->
+      <g class="leaf" data-leaf="bottom" role="button" tabindex="0" aria-label="아래쪽 잎">
+        <svg class="outline" x="143.65" y="350.46" width="102" height="94" viewBox="0 0 102 94">
+          <path d="M8.87298 83.9316C-2.83956 72.2188 -2.97384 53.3631 8.57328 41.816L50.3893 -1.28767e-06L92.8053 42.416C104.518 54.1289 104.652 72.9846 93.105 84.5317C81.5579 96.0789 62.7022 95.9446 50.9893 84.232C39.4421 95.7792 20.5858 95.6444 8.87298 83.9316Z" fill="#05431C"/>
+        </svg>
+        <g class="inner"><svg x="142.27" y="358.16" width="105" height="105" viewBox="0 0 105 105" pointer-events="none">
+          <path d="M17.532 69.3849C7.84947 59.7021 7.73838 44.1146 17.2841 34.5688L51.8529 1.80949e-05L86.9175 35.0646L87.3643 35.5225C96.6012 45.2326 96.5618 60.4839 87.1654 69.8807C77.6196 79.4265 62.0315 79.316 52.3487 69.6335C42.8028 79.1792 27.2147 79.0676 17.532 69.3849Z" fill="#6FC64A"/>
+          <path d="M22.1126 64.3567C13.857 56.1011 13.857 42.7163 22.1126 34.4607L52.0086 4.56472L81.9046 34.4607C90.1601 42.7163 90.1601 56.1011 81.9046 64.3567C73.649 72.6121 60.2642 72.6121 52.0086 64.3567C43.753 72.6122 30.3682 72.6121 22.1126 64.3567Z" fill="#7DDA56"/>
+        </svg></g>
+      </g>
+
+      <!-- 오른쪽 잎 -->
+      <g class="leaf" data-leaf="right" role="button" tabindex="0" aria-label="오른쪽 잎">
+        <svg class="outline" x="191.41" y="303.55" width="94" height="102" viewBox="0 0 94 102">
+          <path d="M83.9316 8.87299C72.2188 -2.83955 53.3631 -2.97382 41.816 8.5733L-1.43936e-06 50.3893L42.4161 92.8053C54.1289 104.518 72.9846 104.652 84.5317 93.105C96.0789 81.5579 95.9446 62.7022 84.232 50.9893C95.7792 39.4421 95.6444 20.5858 83.9316 8.87299Z" fill="#05431C"/>
+        </svg>
+        <g class="inner"><svg x="198.59" y="301.9" width="105" height="105" viewBox="0 0 105 105" pointer-events="none">
+          <path d="M69.3849 17.532C59.7021 7.84923 44.1148 7.73836 34.5688 17.2841L1.79695e-05 51.8529L35.0646 86.9175C44.7475 96.6 60.3348 96.7112 69.8807 87.1654C79.4265 77.6196 79.316 62.0315 69.6335 52.3487C79.1792 42.8027 79.0676 27.2147 69.3849 17.532Z" fill="#6FC64A"/>
+          <path d="M64.3559 22.1119C56.1003 13.8565 42.7155 13.8564 34.4599 22.1119L4.56328 52.0086L34.46 81.9052L34.8501 82.2857C43.1321 90.1587 56.2298 90.0313 64.3566 81.9045C72.6119 73.6489 72.612 60.2641 64.3566 52.0085C72.6122 43.7529 72.6116 30.3675 64.3559 22.1119Z" fill="#7DDA56"/>
+        </svg></g>
+      </g>
+
+      <!-- 위 잎 -->
+      <g class="leaf" data-leaf="top" role="button" tabindex="0" aria-label="위쪽 잎">
+        <svg class="outline" x="143.85" y="264.56" width="102" height="94" viewBox="0 0 102 94">
+          <path d="M92.8053 9.1734C104.518 20.8862 104.652 39.7419 93.105 51.2891L51.2891 93.105L8.87301 50.689C-2.83959 38.9762 -2.97381 20.1205 8.57331 8.57333C20.1205 -2.97381 38.9762 -2.83958 50.689 8.87302C62.2362 -2.67419 81.0925 -2.5394 92.8053 9.1734Z" fill="#05431C"/>
+        </svg>
+        <g class="inner"><svg x="142" y="246.01" width="105" height="105" viewBox="0 0 105 105" pointer-events="none">
+          <path d="M86.9176 35.0646C96.6003 44.7474 96.7119 60.3354 87.1662 69.8813L52.5966 104.449L17.532 69.3849C7.84954 59.702 7.73837 44.1147 17.2841 34.5688C26.83 25.023 42.418 25.1335 52.1008 34.816C61.6468 25.2703 77.2348 25.3819 86.9176 35.0646Z" fill="#6FC64A"/>
+          <path d="M82.3376 40.0935C90.593 48.3492 90.5931 61.7339 82.3376 69.9895L52.4409 99.8862L22.5443 69.9895L22.1638 69.5994C14.2908 61.3174 14.4182 48.2196 22.545 40.0928C30.8006 31.8376 44.1854 31.8375 52.4409 40.0928C60.6966 31.8373 74.082 31.8379 82.3376 40.0935Z" fill="#7DDA56"/>
+        </svg></g>
+      </g>
+
+      <!-- 줄기 -->
+      <svg class="stem" x="240.47" y="401.21" width="57" height="37" viewBox="0 0 57 37">
+        <path d="M56.7426 36.3793C33.4964 39.8571 12.8891 23.1851 5.49121 14.4145L-5.87096e-06 4.80483L2.0592 1.47042e-05L11.8976 2.97442C25.2596 25.4884 47.3617 27.9137 56.7425 26.3121L56.7426 36.3793Z" fill="#05431C"/>
+      </svg>
+      <defs>
+        <filter id="bubble-shadow" x="0" y="0" width="61.5576" height="46.5713" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dx="2" dy="3"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+        </filter>
+        <!-- 말풍선 템플릿 (피그마 351:190 + 351:188) -->
+        <g id="bubble-template">
+          <svg x="166.22" y="211.03" width="62" height="47" viewBox="0 0 62 47" overflow="visible">
+            <g filter="url(#bubble-shadow)">
+              <path d="M47.5576 1C51.9756 1.00018 55.5574 4.58206 55.5576 9V23.4121C55.5575 27.8302 51.9757 31.4119 47.5576 31.4121H46.0732L48.2695 39.5713L36.3652 31.4121H10C5.582 31.4119 2.00013 27.8301 2 23.4121V9C2.00026 4.58209 5.58208 1.00023 10 1H47.5576Z" fill="#E8FDA6"/>
+            </g>
+          </svg>
+          <text x="195" y="227.24" text-anchor="middle" dominant-baseline="central" font-family="LeeSeoyun, 'Apple SD Gothic Neo', sans-serif" font-size="16" fill="#05431C">행운 +1</text>
+        </g>
+      </defs>
+      <g id="bubble-layer"></g>
+    </svg>
+    <p class="caption">클릭커를 누르며 심신의 안정을...</p>
+  </main>
+
+  <!-- iOS 햅틱: 스위치형 체크박스를 토글하면 Taptic Engine이 울림 (iOS 18+) -->
+  <div class="haptic-hidden" aria-hidden="true">
+    <input type="checkbox" id="haptic-switch" switch tabindex="-1">
+    <label for="haptic-switch" id="haptic-label"></label>
+  </div>
+
+<script>
+(() => {
+  const hapticLabel = document.getElementById('haptic-label');
+
+  // 안드로이드: Vibration API / 아이폰: 숨겨진 스위치 토글
+  function haptic(ms) {
+    let vibrated = false;
+    try {
+      if (typeof navigator.vibrate === 'function') vibrated = navigator.vibrate(ms);
+    } catch (e) {}
+    if (!vibrated) hapticLabel.click();
+  }
+
+  const PRESS_MS = 14;   // 누를 때 (조금 더 묵직하게)
+  const RELEASE_MS = 8;  // 뗄 때 (가볍게)
+
+  // ── 소리: 보내주신 녹음에서 잡음을 걷어낸 클릭 소리 (누를 때 / 뗄 때) ──
+  const SOUND_SRC = {
+    press: 'data:audio/wav;base64,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d/9w/4T/if9z/6P/p/+u/8D/u//x//H/0//c/9f/3//X/7j/s/+9/67/iv91/3T/e/+C/3n/b/+S/6D/lP+y/7f/0v/5/9r/6/////f/AAD0//P/9//o/+H/3P/a/9v/2f/X/9f/z//h/+3/4f/v/+X//v8OAOT/+v8EAA8AEgDp/wIADQAMAAAA5f8QAAoAAQD9/+H/BwACAPX/AAD0/wMADQAKAP//AwAWABsAKwATABQAOQAnACIAGwAaADMAJgAOAA4AFwATABAABAD+/xMAEAAMAA4AAgAUAB0AIAAcABYAJwAoACwAIwAbADUALwAoACIAEwAuACkAHQAnABoAKgAtABcAKAAlACQANAAdABcAIwAcACYAKgARABMAKwAdABYAFAAFABwAGgDv//T////0//b/5f/X/+//7v/Z/+L/6P/k//L/7//i//P/8//n//j/7P/m//r/6f/o/+7/5//r/+T/6//v//D/7//j//v/+P/q//D/6P/9/+//3//x/+v/+f/r/9z/+//z//X/+f/t////AAD1//X/8//2/wMA/v/v//n/+v8AAAIA8v8DAA8ABQAAAAAACgAMAAsAAQAOABkABQAPABEADwAaAA8AGAAXABUAFgATACUAEAAUACoADwAgABwADQAtABsADQAjAB8AGAAaABYAFwAlABoACwAeAB8AFwAbABMAFwAlABsADQAaABoAGQAbAAsAEgAaAA4ADQAFAA0ADgAEAAsABAAHAA4AAgANAA4ABQANAA0ABwADAAUACAAGAAEA9//+/wgA/P/4//n/9v8BAPv/8P/4//f/+v/7//P/+//5//z/+//w/wAA+P/x//3/7f/1//r/5//2//b/6P/w//b/8//y/+v/5//9//r/4v/p//P/9//1/+T/6f/5//n/5v/l//L/7f/y/+b/3P/x/+n/5P/l/93/5v/r/+j/3f/f/+z/5v/q/9//4P/0/+n/5f/l/+n/8//n/+r/6f/s//L/6P/w/+//7P/0//P/9P/u//L/9//2//j/7P/0//v/8P/z//D/9f/9//T/9P/5//3/AgD+//z/AgAGAAgABwAAAAgADwAKAAkABQAMABQADAAKAAsAEQATAA0ADAANABIAEAAJAAcABgALAAkAAwAAAAAACgAHAAAAAwAIABEADgAFAAwAFgAYAA8ACQASABUAEAAGAAIADAALAAIAAAAAAAYACgAEAAIACQAPABAAEAAMAA8AGgAYABEAEgAUABwAGQAOABEAGAAbABYADwAUABsAGQAUABAAFgAbABUAEgARABIAFgAQAAsADQAMAA0ACQAFAAYABwAGAAAAAAACAAAAAQD9//z/AwD+//3//v/8/wAA/v/8/wAA/v/+//3//P////3/+v/6//v/+v/6//b/9P/5//f/9f/z//L/9//3//X/8//2//z/9f/2//f/9v/+//X/8v/4//b/9v/z/+//8v/1//P/8P/z//X/9//4//b/+P/8//v/+f/6//r/+f/5//T/8//2//T/8v/y//P/9P/1//X/9P/5//n/+P/8//z//v////7/AAAAAAIAAAAAAAIAAQACAAEA//8AAAEA/v////7//P/+//z/+v/8//v/+//8//z//v///wAAAAACAAMABQAGAAUABwAGAAgABwAFAAcABgAGAAUABAAFAAUABAAEAAUABwAEAAUABgAFAAYABAAEAAUABAACAAEAAgAAAAAAAAD//wAAAAAAAAAAAQABAAIAAwABAAMABAADAAUABAADAAUAAwADAAMAAgADAAIAAQABAAEAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////7/////////////////AAD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',
+    release: 'data:audio/wav;base64,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mv+2/63/jv9f/2b/Zf9E/z7/S/+D/6T/qv/S/+//AgAIAAwAIQAlAB8AFAALAPv/5P/T/83/vf+i/4z/b/9M/zv/Mf9H/2f/j//E/+//CgATAB4AKgAwAEIAWQB8AJwAoACYAIYAbABSADYAKAAqAC4AMQAnACEAJwAlACgALQA2AEsAUwBNAE8ATQBLADoAJAAaABMABQDx/9v/zv+9/6f/mv+a/6//xf/T/+T/7//3//X/8////wwAHwAxAEAAUQBSAEYAMAAWAP//5//Z/9r/5P/u/+7/5v/a/8v/v/+7/8b/2P/p//n/AAAAAPT/6v/f/9j/2P/V/9v/4v/h/93/2P/b/+7/+f8MACgAPwBSAFEAUQBVAFUAVABNAEYAQAAsABEA9v/i/9T/wf+4/7b/vv/K/8v/3P/2/wsAIAApADgATQBRAFIAUgBTAFkASQA1ACQAEgAAAOj/1f/Q/87/zP/L/9H/3v/p//P//v8QACUALgA1ADoAPAA8ACwAGgAQAP3/6v/R/7n/r/+e/4//h/+D/43/l/+j/7j/z//m//n/BgAYACUAMQA5AD8AQgA8AC8AGwADAO7/1//J/8P/w//H/83/1v/i/+3/+v8HABoALwA/AE4AWABcAFwAUAA/AC0AGQAIAPv/7//r/+f/5v/o/+3/9f8AAA4AHwAuADoAQwBHAEcAQwA6AC8AIQARAP//7f/e/9H/yv/H/8r/0f/a/+P/7f/2//3/AwAHAA0AEAAQAA4ACQADAPn/7P/i/9j/0f/N/83/0//a/+H/6f/w//n//v8AAAIAAwAFAAQAAgACAAAA/f/2/+//6//n/+T/4//l/+z/8f/z//f/+/8AAAIAAQAEAAgADAAMAAoADAAOAAsACQAGAAgABwAEAAEA//8AAP///v///wIABQAGAAQABAAFAAUABQAHAAwAEAARABIAEQARAA0ACQAIAAYABQAEAAMABAAEAAMAAgACAAUABQAFAAgADAAQABIAEwAWABgAGAAVABEADwAKAAUAAAD8//n/9v/y//H/8P/w//P/9f/4//7/AgAIAAwAEAAUABUAFQATABAADgAKAAYAAQD///7/+v/3//b/9f/1//T/9P/1//b/9//3//n/+f/5//r/+f/5//j/9//3//b/9//2//b/9//3//f/9//3//f/9//3//f/+P/5//n/+f/5//n/+f/5//j/+P/5//n/+f/5//r/+//7//z//f///wAAAAACAAMABAAFAAYABwAHAAcABwAHAAYABQAFAAMAAgACAAEAAQABAAEAAQACAAIAAgADAAQABAAFAAUABQAFAAUABQAEAAQAAwACAAIAAQAAAAAAAAD//////////////////wAAAAAAAAEAAQACAAIAAgADAAMAAgACAAIAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA='
+  };
+  const VOLUME = { press: 0.9, release: 0.9 };
+  let audio = null;
+  const buffers = {};
+  function b64ToArrayBuffer(dataUri) {
+    const bin = atob(dataUri.split(',')[1]);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes.buffer;
+  }
+  function getAudio() {
+    if (!audio) {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      audio = new AC();
+      for (const key of Object.keys(SOUND_SRC)) {
+        audio.decodeAudioData(b64ToArrayBuffer(SOUND_SRC[key]),
+          (buf) => { buffers[key] = buf; }, () => {});
+      }
+    }
+    if (audio.state === 'suspended') audio.resume().catch(() => {});
+    return audio;
+  }
+  function clickSound(key) {
+    const ac = getAudio();
+    if (!ac || !buffers[key]) return;
+    const src = ac.createBufferSource();
+    const g = ac.createGain();
+    src.buffer = buffers[key];
+    src.playbackRate.value = 0.97 + Math.random() * 0.06; // 매번 똑같지 않게 아주 살짝 변화
+    g.gain.value = VOLUME[key];
+    src.connect(g).connect(ac.destination);
+    src.start();
+  }
+  // 페이지가 열리면 소리를 미리 해독해 두기 (첫 클릭부터 바로 소리가 나도록)
+  try { getAudio(); } catch (e) {}
+
+  // ── 말풍선: 아래에서 살짝 올라오며 희미해짐 ──
+  const bubbleTemplate = document.getElementById('bubble-template');
+  const bubbleLayer = document.getElementById('bubble-layer');
+  function spawnBubble() {
+    const b = bubbleTemplate.cloneNode(true);
+    b.removeAttribute('id');
+    b.setAttribute('class', 'bubble');
+    const dx = (Math.random() * 2 - 1) * 6; // 연타 시 겹치지 않게 살짝 흔들기
+    bubbleLayer.appendChild(b);
+    const anim = b.animate([
+      { transform: `translate(${dx}px, 14px)`, opacity: 0 },
+      { transform: `translate(${dx}px, 0px)`, opacity: 1, offset: 0.18 },
+      { transform: `translate(${dx}px, -26px)`, opacity: 0 }
+    ], { duration: 1400, easing: 'cubic-bezier(.22, .61, .36, 1)', fill: 'forwards' });
+    anim.onfinish = () => b.remove();
+  }
+
+  document.querySelectorAll('.leaf').forEach((leaf) => {
+    let activePointer = null;
+
+    const press = () => {
+      leaf.classList.add('pressed');
+      haptic(PRESS_MS);
+      clickSound('press');
+      spawnBubble();
+    };
+    const release = (withHaptic) => {
+      if (!leaf.classList.contains('pressed')) return;
+      leaf.classList.remove('pressed');
+      if (withHaptic) {
+        haptic(RELEASE_MS);
+        clickSound('release');
+      }
+    };
+
+    leaf.addEventListener('pointerdown', (e) => {
+      if (activePointer !== null) return;
+      e.preventDefault();
+      activePointer = e.pointerId;
+      try { leaf.setPointerCapture(e.pointerId); } catch (_) {}
+      press();
+    });
+    leaf.addEventListener('pointerup', (e) => {
+      if (e.pointerId !== activePointer) return;
+      activePointer = null;
+      release(true);
+    });
+    leaf.addEventListener('pointercancel', (e) => {
+      if (e.pointerId !== activePointer) return;
+      activePointer = null;
+      release(false);
+    });
+
+    // 키보드 (Space / Enter)
+    leaf.addEventListener('keydown', (e) => {
+      if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) { e.preventDefault(); press(); }
+    });
+    leaf.addEventListener('keyup', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); release(true); }
+    });
+    leaf.addEventListener('blur', () => release(false));
+  });
+
+  // 더블탭 확대·길게 누르기 메뉴 방지
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+  document.addEventListener('dblclick', (e) => e.preventDefault());
+})();
+</script>
+</body>
+</html>
